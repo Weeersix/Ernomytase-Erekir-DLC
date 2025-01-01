@@ -1,0 +1,316 @@
+type: tank
+name: Warrior
+description: Fires five powerful projectiles and a volley of 25 bullets.
+hitSize: 53
+flying: false
+omniMovement: ture
+health: 42000
+armor: 20
+speed: 0.4
+crushDamage: 15
+rotateSpeed: 0.3
+itemCapacity: 0
+
+outlineColor: 17191f
+
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    layer: -1
+    mirror: true
+    blending: additive
+    color: ff0000
+    outline: false
+  }
+]
+treadRects: [
+  {
+  x: -80
+  y: -3
+  width: 55
+  height: 120
+  }
+  {
+  x: -27
+  y: -131
+  width: 54
+  height: 57
+  }
+  {
+  x: -116
+  y: -137
+  width: 58
+  height: 40
+  }
+]
+template: TankUnitType
+treadPullOffset: 3
+treadFrames: 18
+
+weapons: [
+ {
+    name: Warrior-basic-weapon
+    x: 0
+    y: 7.5
+    mirror: false
+    rotate: true
+    rotationLimit: 240
+    rotateSpeed: 0.8
+    layerOffset: 0.0001
+    reload: 100
+    recoil: 3
+    shootY: 22.5
+    shoot: {
+  type: ShootSpread
+  shots: 5
+  spread: 1.8
+  firstShotDelay: 30
+}
+
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    layer: -1
+    mirror: true
+    blending: additive
+    color: ff0000
+    outline: false
+  }
+  {
+    type: RegionPart
+    suffix: -blade
+    under: true
+    mirror: true
+    outline: true
+    progress: warmup
+    moveX: 5
+    moveRot: -70
+    x: 2.75
+    y: 2.75
+    heatProgress: warmup
+  }
+  {
+    type: RegionPart
+    suffix: -blade
+    under: true
+    mirror: true
+    outline: true
+    progress: warmup
+    moveY: 4.5
+    moveX: 5
+    moveRot: -45
+    x: 2.75
+    y: 4
+    heatProgress: warmup
+  }
+  {
+    type: RegionPart
+    suffix: -blade
+    under: true
+    mirror: true
+    outline: true
+    progress: warmup
+    moveY: 1.5
+    moveX: 8.75
+    moveRot: -95
+    x: 2.75
+    y: -4
+    heatProgress: warmup
+  }
+]
+shootSound: largeCannon
+
+heatColor: f9350f
+cooldownTime: 96
+    bullet: {
+      type: BasicBulletType
+      damage: 170
+      speed: 6
+      sprite: ernom-missle
+      lifetime: 80
+      width: 8
+      height: 16
+      smokeEffect: shootSmokeTitan
+      pierceCap: 5
+      pierce: true
+      pierceBuilding: true
+      backColor: d4662f
+      frontColor: feb380
+      trailColor: feb380
+      trailWidth: 2.1
+      trailLength: 10
+      splashDamage: 40
+      splashDamageRadius: 36
+      homingPower: 0.8
+      homingDelay: 20
+
+      shootEffect: 
+{
+        type: ExplosionEffect
+        lifetime: 40
+        waveStroke: 4
+        waveColor: feb380
+        waveRad: 25
+        smokeSize: 3
+        smokes: 6
+        smokeSizeBase: 1
+        smokeColor: feb380
+        sparks: 6
+        sparkRad: 20
+        sparkLen: 3
+        sparkStroke: 3
+        sparkColor: ed7b39
+}
+despawnEffect:
+{
+        type: ExplosionEffect
+        lifetime: 55
+        waveStroke: 3
+        waveColor: feb380
+        waveRad: 20
+        smokeSize: 8
+        smokes: 7
+        smokeSizeBase: 0
+        smokeColor: feb380
+        sparks: 6
+        sparkColor: feb380
+        sparkRad: 20
+        sparkLen: 2
+        sparkStroke: 1.5
+}     
+    intervalBullets: 2
+    intervalAngle: 4
+    intervalRandomSpread: 0
+    intervalSpread: 15
+	  bulletInterval: 8
+    intervalBullet: {
+
+        type: BasicBulletType
+        sprite: ernom-missle
+        homigRadius: 80
+        damage: 55
+        width: 6
+        height: 10
+        despawnEffect: none
+        hitEffect: none
+        speed: 5
+        drag: 0.06
+        lifetime: 35
+        backColor: d4662f
+        frontColor: feb380
+        trailColor: feb380
+        trailLength: 12
+        trailWidth: 2
+        pierce: true
+        pierceCap: 1
+        pierceBuilding: true 
+        homingPower: 0.6
+        weaveMag: 3
+        weaveScale: 1.4
+    despawnEffect: {
+        type: ParticleEffect
+        colorFrom: feb380
+        colorTo: d4662f
+        particles: 6
+        cone: 50
+        length: 6
+        baseLength: 3
+        lightScl: 0.6
+        lightOpacity: 0.8
+        spin: 0
+        sizeFrom: 1.8
+        sizeTo: 0
+        offset: 1
+}
+    }
+   }
+  }
+{
+    name: Warrior-weapon
+    x: 22.5
+    y: 18.75
+    mirror: true
+    rotate: true
+    rotationLimit: 290
+    rotateSpeed: 1.5
+    shootY: 8
+    reload: 360
+    recoil: 2
+    shoot: {
+  type: ShootSpread
+  shots: 25
+  spread: 0.4
+  shotDelay: 6
+  firstShotDelay: 60
+  }
+  shootSound: dullExplosion
+
+    heatColor: f9350f
+    cooldownTime: 350
+  bullet: {
+      type: BasicBulletType
+      damage: 100
+      speed: 9
+      lifetime: 70
+      width: 4
+      height: 8
+      smokeEffect: none
+      pierceCap: 2
+      pierce: true
+      pierceBuilding: true
+      backColor: d4662f
+      frontColor: feb380
+      trailColor: feb380
+      trailWidth: 2.1
+      trailLength: 10
+      despawnEffect: {
+        type: ParticleEffect
+        colorFrom: feb380
+        colorTo: d4662f
+        particles: 7
+        cone: 45
+        length: 10
+        baseLength: 3
+        lightScl: 0.8
+        lightOpacity: 1
+        spin: 0
+        sizeFrom: 2.5
+        sizeTo: 0
+        offset: 1
+}
+      shootEffect: {
+        type: ParticleEffect
+        colorFrom: feb380
+        colorTo: d4662f
+        particles: 4
+        cone: 45
+        length: 10
+        baseLength: 2
+        lightScl: 1
+        lightOpacity: 1.2
+        spin: 0
+        sizeFrom: 2.4
+        sizeTo: 0
+        offset: 1
+    }
+  }
+}
+]
+
+research: {
+      parent: conquer
+      requirements: [
+        silicon/1000
+        tungsten/950
+        oxide/600
+        carbide/400
+      ]
+      objectives: [
+{
+  type: SectorComplete
+  preset: Ravine
+}
+]
+}
