@@ -1,0 +1,20 @@
+name: Huge carbide wall
+description: Protects buildings from enemy projectiles.
+type: Wall
+category: defense
+size: 3
+health: 9720
+armor: 16
+
+requirements: [
+    carbide/96
+    thorium/96
+]
+
+research: {
+    parent: carbide-wall-large
+    requirements: [
+          carbide/288
+          thorium/288
+    ]
+  }

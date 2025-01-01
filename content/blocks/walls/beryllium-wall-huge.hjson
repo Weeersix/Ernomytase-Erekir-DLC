@@ -1,0 +1,18 @@
+name: Huge beryllium wall
+description: Protects buildings from enemy projectiles.
+type: Wall
+category: defense
+size: 3
+health: 4680
+armor: 2
+
+requirements: [
+    beryllium/54
+]
+
+research: {
+    parent: beryllium-wall-large
+    requirements: [
+        beryllium/1260
+    ]
+  }

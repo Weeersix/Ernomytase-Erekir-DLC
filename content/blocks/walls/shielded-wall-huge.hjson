@@ -1,0 +1,32 @@
+name: Huge shielded wall
+description: Protects buildings from enemy shells. When energy is aplied, it creates a shield that absorbs most projectiles. Conducts energy.
+type: ShieldWall
+category: defense
+size: 3
+health: 9360
+armor: 15
+
+outputsPower: false
+hasPower: true
+consumesPower: true
+conductivePower: true
+chanceDeflect: 8
+
+consumes: {
+  power: 0.05
+}
+
+requirements: [
+    phase-fabric/45
+    surge-alloy/27
+    beryllium/27
+]
+
+research: {
+    parent: shielded-wall
+    requirements: [
+          phase-fabric/650
+          surge-alloy/750
+          beryllium/750
+    ]
+  }

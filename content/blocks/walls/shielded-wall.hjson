@@ -1,0 +1,8 @@
+research: {
+    parent: shielded-wall-small
+    requirements: [
+          phase-fabric/120
+          surge-alloy/210
+          beryllium/270
+    ]
+  }
