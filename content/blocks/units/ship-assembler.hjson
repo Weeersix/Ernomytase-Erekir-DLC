@@ -1,0 +1,29 @@
+plans: [
+{
+unit: quell
+requirements: [
+elude/4
+beryllium-wall-large/12
+]
+time: 3600
+}
+{
+unit: disrupt
+requirements: [
+avert/6
+carbide-wall-large/20
+]
+time: 10800
+}
+{
+unit: Extermination
+requirements: [
+elude/4
+avert/6
+ernom-tungsten-wall-huge/6
+ernom-carbide-wall-huge/6
+]
+time: 14400
+}
+]
+

@@ -1,0 +1,29 @@
+plans: [
+{
+unit: vanquish
+requirements: [
+stell/4
+tungsten-wall-large/10
+]
+time: 3000
+}
+{
+unit: conquer
+requirements: [
+locus/6
+carbide-wall-large/20
+]
+time: 10800
+}
+{
+unit: Warrior
+requirements: [
+stell/6
+locus/8
+ernom-tungsten-wall-huge/8
+ernom-carbide-wall-huge/6
+]
+time: 14400
+}
+]
+

@@ -1,0 +1,41 @@
+  type: UnitAssemblerModule
+  name: Improved assembler module
+  description: Increases the level of the unit assembler to the second level if placed next to border. It will only work if a first-level module is also placed near the border.
+  size: 6
+  category: units
+  health: 6350
+  tier: 2
+
+requirements: [
+  silicon/1000
+  tungsten/800
+  oxide/750
+  thorium/400
+  carbide/350
+]
+
+consumes: {
+    liquids: {
+        liquids: [
+        hydrogen/0.416666667
+        ]
+    }
+    power: 6
+}
+
+  research: {
+      parent: basic-assembler-module
+      requirements: [
+          silicon/1600
+          tungsten/1400
+          oxide/1250
+          thorium/850
+          carbide/800
+ ]
+ objectives: [
+{
+  type: SectorComplete
+  preset: Ravine
+}
+]
+}

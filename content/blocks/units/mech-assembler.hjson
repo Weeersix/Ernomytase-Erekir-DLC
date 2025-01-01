@@ -1,0 +1,29 @@
+plans: [
+{
+unit: tecta
+requirements: [
+merui/5
+tungsten-wall-large/12
+]
+time: 4200
+}
+{
+unit: collaris
+requirements: [
+cleroi/6
+carbide-wall-large/20
+]
+time: 10800
+}
+{
+unit: Ephrumus
+requirements: [
+merui/6
+cleroi/8
+ernom-tungsten-wall-huge/8
+ernom-carbide-wall-huge/6
+]
+time: 14400
+}
+]
+
