@@ -1,0 +1,56 @@
+type: missile
+template: MissileUnitType
+flying: true
+lowAltitude: true
+playerControllable: true
+logicControllable: false
+speed: 4
+physics: false
+lifetime: 200
+hitSize: 1
+trailLength: 6
+useUnitCap: false
+health: 120
+trailColor: bf92f9
+drawCell: false
+range: 2
+loopSound: missileTrail
+loopSoundVolume: 0.3
+
+missileAccelTime: 25
+targetAir: false
+targetUnderBlocks: false
+
+engineLayer: 116
+engineColor: bf92f9
+trailColor: bf92f9
+
+parts: [
+  {
+            type: ShapePart
+            layer: 116
+            circle: true
+            y: -0.5
+            radius: 2
+            color: bf92f9
+            colorTo: dbbfff
+            interp: pow5In
+  }
+]
+
+hidden: true
+targetable: true
+weapons: [
+  {
+    reload: 1
+    shootOnDeath: true
+    mirror: true
+    shootCone: 360
+    shake: 1
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 120
+      splashDamageRadius: 25
+    }
+  } 
+]
