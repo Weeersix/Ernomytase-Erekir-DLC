@@ -1,0 +1,335 @@
+type: flying
+name: Extermination
+description: Fires three energy projectiles and a volley of five rocket.
+envDisabled: 0
+lowAltitude: false
+speed: 0.8
+drag: 0.07
+rotateSpeed: 0.7
+flying: true
+health: 21000
+armor: 9
+targetAir: false
+hitSize: 52
+
+abilities: [
+{
+    type: SuppressionFieldAbility
+    orbRadius: 3.6
+    particleSize: 4
+    y: 8.5
+    x: 9.25
+    particles: 8
+}
+{
+    type: SuppressionFieldAbility
+    orbRadius: 3.6
+    particleSize: 4
+    y: 8.5
+    x: -9.25
+    particles: 8
+}
+{
+    type: SuppressionFieldAbility
+    orbRadius: 4.2
+    particleSize: 4.4
+    y: -11.5
+    x: 15
+    particles: 8
+}
+{
+    type: SuppressionFieldAbility
+    orbRadius: 4.2
+    particleSize: 4.4
+    y: -11.5
+    x: -15
+    particles: 8
+}
+]
+
+outlineColor: 232024
+
+weapons: [
+{
+   name: Extermination-missle-weapon
+   x: 19.5
+   y: 7.25
+   range: 100
+   reload: 150
+   rotate: true
+   rotateSpeed: 1
+   rotationLimit: 200
+   recoil: 2
+   mirror: true
+   shootY: 9
+   shootSound: missileLarge
+   shoot: {
+  type: ShootSpread
+  shots: 5
+  shotDelay: 7
+  firstShotDelay: 15
+}
+  inaccuracy: 80
+
+  parts: [
+    {
+    type: RegionPart
+    suffix: -blade
+    under: false
+    mirror: true
+    outline: true
+    progress: warmup
+    outline: false
+    moveY: -2.25
+    moveRot: -13
+    } 
+  ]
+
+    heatColor: fa6a0a
+    cooldownTime: 140
+  bullet: {
+      spawnUnit: Extermination-missle
+      shootEffect: sparkShoot
+      smokeEffect: shootSmokeTitan
+      despawnEffect: {
+      type: ExplosionEffect
+      lifetime: 50
+      waveStroke: 5
+      waveLife: 8
+      waveColor: ffffff
+      sparkColor: 7469af
+      waveRad: 40
+      smokeSize: 5
+      smokes: 7
+      smokeSizeBase: 0
+      smokeColor: 7469af
+      sparks: 10
+      sparkRad: 40
+      sparkLen: 6
+      sparkStroke: 2
+    }
+  }
+}
+{
+    type: weapon
+    x: 0
+    y: 0.25
+    range: 90
+    reload: 300
+    rotate: true
+    rotateSpeed: 0.6
+    layerOffset: 0.0001
+    recoil: 3.5
+    mirror: false
+    shootY: 16
+    shootSound: shockBlast
+    shoot: {
+    type: ShootHelix
+    shots: 3
+    mag: 1.5
+    scl: 5
+    }
+
+    heatColor: fa6a0a
+    cooldownTime: 260
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 150
+      lifetime: 120
+      sprite: ernom-large-orb
+      speed: 6
+      width: 29
+      height: 29
+      smokeEffect: shootSmokeTitan
+      layer: 116
+      backColor: 9c8bff
+      frontColor: cea8ff
+      trailColor: 9c8bff
+      trailWidth: 4
+      trailLength: 20
+      splashDamage: 150
+      splashDamageRadius: 38
+      shootEffect: {
+        type: ExplosionEffect
+        lifetime: 50
+        layer: 116
+        waveStroke: 4
+        waveRad: 25
+        waveColor: ecdeff
+        smokeSize: 3
+        smokes: 7
+        smokeSizeBase: 1.5
+        smokeColor: bc89ff
+        sparks: 8
+        sparkRad: 20
+        sparkLen: 3
+        sparkStroke: 3
+        sparkColor: bc89ff
+    }
+      despawnEffect: {
+      type: ExplosionEffect
+      lifetime: 50
+      waveStroke: 5
+      waveLife: 8
+      waveColor: ffffff
+      sparkColor: 7469af
+      waveRad: 40
+      smokeSize: 6.5
+      smokeColor: bc89ff
+      smokes: 4
+      smokeSizeBase: 0
+      sparks: 6
+      sparkRad: 40
+      sparkLen: 6
+      sparkStroke: 2
+      }
+      intervalBullets: 2
+      intervalAngle: 4
+      intervalRandomSpread: 0
+      intervalSpread: 10
+	    bulletInterval: 8
+      intervalBullet: {
+                type: LightningBulletType
+                damage: 85
+                collidesAir: true
+                ammoMultiplier: 1.25
+                lightningColor: bf92f9
+                lightningLength: 4
+                lightningLengthRand: 7
+
+      despawnEffect: {
+      type: ExplosionEffect
+      lifetime: 50
+      waveStroke: 5
+      waveLife: 8
+      waveColor: ffffff
+      sparkColor: 7469af
+      waveRad: 40
+      smokeSize: 5
+      smokes: 7
+      smokeColor: bc89ff
+      smokeSizeBase: 0
+      sparks: 10
+      sparkRad: 40
+      sparkLen: 6
+      sparkStroke: 2
+    }
+    }
+    fragBullet: {
+        type: BasicBulletType
+        damage: 80
+        speed: 7
+        lifetime: 30
+        frontColor: bf8dff
+        backColor: 9c8bff
+        width: 15
+        height: 15
+        collides: false
+        shootEffect: none
+        smokeEffect: none
+        hitEffect: none
+        trailColor: 9c8bff
+        trailLength: 14
+        trailWidth: 1.3
+        homingPower: 1.5
+        homingDelay: 15
+
+        despawnEffect: [
+        {
+          type: MultiEffect
+        }
+        {
+           type: WaveEffect 
+           colorFrom: bf8dff
+           colorTo: 9c8bff
+           sizeFrom: 0
+           sizeTo: 4
+           lightScl: 3
+           lightOpacity: 1
+           rotation: 0 
+           strokeFrom: 3
+           strokeTo: 0 
+        }
+        {
+           type: ParticleEffect
+           colorFrom: bf8dff
+           colorTo: 9c8bff
+           particles: 8
+           cone: 45
+           length: 15
+           baseLength: 2
+           lightScl: 1.2
+           lightOpacity: 1.3
+           spin: 0
+           sizeFrom: 2.5
+           sizeTo: 0
+           offset: 1
+        }
+      ]
+      fragBullets: 3
+      fragSpread: 1.5
+      intervalBullets: 2
+      intervalAngle: 4
+      intervalRandomSpread: 0
+      intervalSpread: 10
+	    bulletInterval: 10
+      intervalBullet: {
+                type: LightningBulletType
+                damage: 30
+                collidesAir: true
+                ammoMultiplier: 1.25
+                lightningColor: bf92f9
+                lightningLength: 2.4
+                lightningLengthRand: 6
+   }
+}
+fragBullets: 3
+fragSpread: 1.5
+  }
+}
+
+]
+
+engines: [
+{
+    x: 10.75
+    y: -26.75
+    rotation: 90
+    radius: 7.5
+}
+{
+    x: -10.75
+    y: -26.75
+    rotation: 90
+    radius: 7.5
+}
+{
+    x: 29.25
+    y: -19
+    rotation: -45
+    radius: 7
+}
+{
+    x: -29.25
+    y: -19
+    rotation: -45
+    radius: 7
+}
+]
+
+research: {
+      parent: disrupt
+      requirements: [
+        silicon/1200
+        tungsten/1000
+        oxide/650
+        carbide/550
+        phase-fabric/400
+      ]
+      objectives: [
+{
+  type: SectorComplete
+  preset: Ravine
+}
+]
+}
