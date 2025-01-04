@@ -1,0 +1,16 @@
+  name: Sulfur
+  explosiveness: 0
+  flammability: 1.5
+  radioactivity: 0.2
+  charge: 0
+  color: cabf45
+  cost: 1
+
+  hiddenOnPlanets: [
+    serpulo
+  ]
+
+  research: {
+    parent: phase-fabric
+    planet: erekir
+  }
