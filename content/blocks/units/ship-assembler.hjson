@@ -20,7 +20,7 @@ unit: Extermination
 requirements: [
 elude/4
 avert/6
-ernom-tungsten-wall-huge/6
+ernom-tungsten-wall-huge/14
 ernom-carbide-wall-huge/6
 ]
 time: 14400
