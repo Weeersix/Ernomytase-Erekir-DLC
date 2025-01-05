@@ -1,0 +1,19 @@
+//localizedName: Rhyolite ravine
+//description: A ravine where you will encounter one of the most powerful technologies.
+planet: erekir
+sector: 7
+captureWave: 12
+difficulty: 10
+addStartingItems: true
+showSectorLandInfo: true
+alwaysUnlocked: false
+research: {
+parent: origin
+requiresUnlock: false
+objectives: [
+   {
+    type: SectorComplete
+    preset: origin
+   }
+ ]
+}
