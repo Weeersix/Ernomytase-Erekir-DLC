@@ -395,20 +395,3 @@ fragBullet: {
 }
   }
 ]
-
-research: {
-      parent: collaris
-      requirements: [
-        tungsten/1350
-        silicon/1100
-        oxide/850
-        carbide/700
-        phase-fabric/500
-      ]
-      objectives: [
-{
-  type: SectorComplete
-  preset: Ravine
-}
-]
-}
