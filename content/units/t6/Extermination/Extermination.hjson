@@ -101,8 +101,8 @@ weapons: [
       waveRad: 40
       smokeSize: 5
       smokes: 7
+      smokeColor: bc89ff
       smokeSizeBase: 0
-      smokeColor: 7469af
       sparks: 10
       sparkRad: 40
       sparkLen: 6
@@ -316,20 +316,3 @@ engines: [
     radius: 7
 }
 ]
-
-research: {
-      parent: disrupt
-      requirements: [
-        silicon/1200
-        tungsten/1000
-        oxide/650
-        carbide/550
-        phase-fabric/400
-      ]
-      objectives: [
-{
-  type: SectorComplete
-  preset: Ravine
-}
-]
-}
