@@ -1,7 +1,7 @@
 type: legs
 name: Ephrumus
 description: Fires five homing projectiles and five plasma fragmentation rockets. It can shoot down most projectiles. It can navigate through most areas of the terrain.
-speed: 1
+speed: 0.9
 drag: 0.1
 envDisabled: 0
 rotateSpeed: 0.7
@@ -16,19 +16,19 @@ legStraightness: 0.6
 baseLegStraightness: 0.5
 
 legCount: 8
-legLength: 30
+legLength: 33
 legForwardScl: 2.1
 legMoveSpace: 1.05
 rippleScale: 1.2
-stepShake: 0.5
+stepShake: 0.9
 legGroupSize: 2
 legExtension: -6
 legBaseOffset: 19
-legStraightLength: 0.9
+legStraightLength: 1.1
 legMaxLength: 1.2
 
 legSplashDamage: 32
-legSplashRange: 32
+legSplashRange: 25
 drownTimeMultiplier: 2
 
 hovering: true
@@ -135,12 +135,12 @@ weapons: [
    layerOffset: 0.0001
    mirror: false
    shootCone: 10
-   shootY: 25.25
+   shootY: 21
    shoot: {
   type: ShootSpread
   shots: 5
   shotDelay: 12
-  firstShotDelay: 38
+  firstShotDelay: 55
 }
 shootSound: pulseBlast
 
