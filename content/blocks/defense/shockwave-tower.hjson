@@ -1,0 +1,4 @@
+research: {
+parent: build-tower
+planet: erekir
+}
