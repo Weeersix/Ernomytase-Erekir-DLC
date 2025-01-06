@@ -23,7 +23,7 @@ requirements: [
 ]
 
 research: {
-    parent: reinforced-surge-wall-large
+    parent: reinforced-surge-wall-huge
     requirements: [
           phase-fabric/50
           surge-alloy/60

@@ -1,0 +1,22 @@
+name: Huge reinforced surge wall
+description: Protects buildings from enemy projectiles, periodically releases an electric discharge on impact.
+type: Wall
+category: defense
+size: 3
+health: 9000
+armor: 20
+lightningChance: 0.05
+lightningDamage: 30
+
+requirements: [
+    surge-alloy/54
+    tungsten/18
+]
+
+research: {
+    parent: reinforced-surge-wall-large
+    requirements: [
+        surge-alloy/80
+        tungsten/400
+    ]
+  }
