@@ -304,6 +304,7 @@ research: {
       requirements: [
         silicon/1000
         tungsten/950
+        sulfur/900
         oxide/600
         carbide/400
       ]
