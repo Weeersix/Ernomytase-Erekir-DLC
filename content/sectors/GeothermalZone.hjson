@@ -1,0 +1,18 @@
+//localizedName: Geothermal zone
+//description: A lot of geothermal activity has been detected in this sector. Explore the [#ffd37f]vent drill[] and start mining sulfur.
+planet: erekir
+sector: 2
+difficulty: 8
+addStartingItems: true
+showSectorLandInfo: true
+alwaysUnlocked: false
+research: {
+parent: karst
+requiresUnlock: false
+objectives: [
+   {
+    type: SectorComplete
+    preset: karst
+   }
+ ]
+}
