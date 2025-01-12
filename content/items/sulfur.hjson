@@ -4,13 +4,13 @@
   radioactivity: 0.2
   charge: 0
   color: cabf45
-  cost: 1
+  cost: 1.5
 
   hiddenOnPlanets: [
     serpulo
   ]
 
   research: {
-    parent: phase-fabric
+    parent: carbide
     planet: erekir
   }
