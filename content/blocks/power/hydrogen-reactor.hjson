@@ -1,0 +1,87 @@
+type: ConsumeGenerator
+name: Hydrogen reactor
+description: Produces a large amount of energy using sulfur and hydrogen.
+health: 1350
+size: 3
+fogRadius: 3
+category: power
+outputsPower: true
+powerProduction: 45
+hasLiquids: true
+itemDuration: 180
+
+consumes: {
+  items: {
+    items: [
+      sulfur/2
+    ]
+  }
+  liquids: {
+    liquids: [
+      hydrogen/0.166666667
+    ]
+  }
+}
+
+requirements: [
+  tungsten/190
+  silicon/150
+  surge-alloy/120
+  graphite/100
+  carbide/80
+  sulfur/60
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+    type: DrawRegion
+    suffix: -bottom
+    }
+    {
+    type: DrawLiquidTile
+    suffix: -bottom
+    drawLiquid: hydrogen
+    }
+    {
+    type: DrawSoftParticles
+    alpha: 0.35
+    particleRad: 7
+    particleSize: 7
+    particleLife: 80
+    particles: 5
+    }
+    {
+    type: DrawGlowRegion
+    color: f9a31b
+    }
+    {
+    type: DrawGlowRegion
+    suffix: -glow-hydrogen
+    color: d1e4ff
+    }
+    {
+    type: DrawDefault
+    }
+  ]
+}
+
+research: {
+parent: flux-reactor
+planet: erekir
+requirements: [
+  beryllium/1600
+  tungsten/1450
+  surge-alloy/1200
+  silicon/1150
+  graphite/950
+  sulfur/700
+    ]
+    objectives: [
+   {
+    type: OnSector
+    preset: GeothermalZone
+   }
+ ]
+}
