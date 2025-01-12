@@ -12,6 +12,7 @@ requirements: [
   oxide/750
   thorium/400
   carbide/350
+  sulfur/130
 ]
 
 consumes: {
@@ -31,6 +32,7 @@ consumes: {
           oxide/1250
           thorium/850
           carbide/800
+          sulfur/800
  ]
  objectives: [
 {
