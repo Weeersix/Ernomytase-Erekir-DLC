@@ -1,0 +1,88 @@
+type: AttributeCrafter
+name: Vent drill
+description: When placed on the vent, it constantly removes sulfur and water. Requires energy to work.
+attribute: steam
+group: liquids
+minEfficiency: 9
+baseEfficiency: 0
+displayEfficiency: false
+health: 1320
+liquidBoostIntensity: 1.8
+hasItem: true
+hasLiquids: true
+hasPower: true
+craftEffect: turbinegenerate
+size: 3
+squareSprite: false
+fogRadius: 3
+ambientSound: hum
+ambientSoundVolume: 0.06
+
+consumes: {
+  power: 6.16666667
+
+  liquid: {
+      liquid: nitrogen
+      amount: 0.05
+      optional: true
+      booster: true
+    }
+}
+
+craftTime: 250
+outputItem: sulfur/1
+outputLiquid: water/0.05
+liquidCapacity: 20
+itemCapacity: 20
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawSoftParticles
+      alpha: 0.27
+      particleRad: 16
+      particleSize: 9.5
+      particleLife: 240
+      particles: 29
+    }
+    {
+      type: DrawRegion
+		  suffix: -rotator
+		  spinSprite: true
+		  rotateSpeed: 5
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+category: production
+requirements: [
+  tungsten/110
+  surge-alloy/80
+  silicon/60
+  graphite/60
+]
+
+research: {
+parent: plasma-bore
+planet: erekir
+requirements: [
+  beryllium/1000
+  tungsten/950
+  surge-alloy/750
+  silicon/550
+  graphite/400
+    ]
+    objectives: [
+   {
+    type: OnSector
+    preset: GeothermalZone
+   }
+ ]
+}
