@@ -85,11 +85,20 @@ parts: [
     mirror: true
     outline: true
     progress: warmup
-    moveX: 5
-    moveRot: -70
+    moveX: 5.6
+    moveRot: -58
     x: 2.75
     y: 2.75
     heatProgress: warmup
+    moves: [
+	    {
+	    type: PartMove
+		  progress: recoil
+	    rot: -21
+		  moveY: -0.7
+		  moveX: -2.8
+	    }
+	  ]
   }
   {
     type: RegionPart
@@ -100,10 +109,19 @@ parts: [
     progress: warmup
     moveY: 4.5
     moveX: 5
-    moveRot: -45
+    moveRot: -38
     x: 2.75
     y: 4
     heatProgress: warmup
+    moves: [
+	    {
+	    type: PartMove
+		  progress: recoil
+	    rot: -21
+		  moveY: -0.7
+		  moveX: -2.8
+	    }
+	  ]
   }
   {
     type: RegionPart
@@ -114,10 +132,19 @@ parts: [
     progress: warmup
     moveY: 1.5
     moveX: 8.75
-    moveRot: -95
+    moveRot: -70
     x: 2.75
     y: -4
     heatProgress: warmup
+    moves: [
+	    {
+	    type: PartMove
+		  progress: recoil
+	    rot: -21
+		  moveY: -0.7
+		  moveX: -2.8
+	    }
+	  ]
   }
 ]
 shootSound: largeCannon
