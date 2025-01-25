@@ -7,9 +7,7 @@ minEfficiency: 9
 baseEfficiency: 0
 displayEfficiency: false
 health: 1320
-liquidBoostIntensity: 1.8
 hasItem: true
-hasLiquids: true
 hasPower: true
 craftEffect: turbinegenerate
 size: 3
@@ -19,17 +17,10 @@ ambientSound: hum
 ambientSoundVolume: 0.06
 
 consumes: {
-  power: 6.16666667
-
-  liquid: {
-      liquid: nitrogen
-      amount: 0.05
-      optional: true
-      booster: true
-    }
+  power: 3.16666667
 }
 
-craftTime: 250
+craftTime: 130
 outputItem: sulfur/1
 outputLiquid: water/0.05
 liquidCapacity: 20
@@ -53,7 +44,12 @@ drawer: {
       type: DrawRegion
 		  suffix: -rotator
 		  spinSprite: true
-		  rotateSpeed: 5
+		  rotateSpeed: 6
+    }
+    {
+      type: DrawBlurSpin
+		  suffix: -rotator
+		  rotateSpeed: 6
     }
     {
       type: DrawDefault
@@ -63,10 +59,10 @@ drawer: {
 
 category: production
 requirements: [
-  tungsten/110
-  surge-alloy/80
-  silicon/60
-  graphite/60
+  tungsten/80
+  silicon/50
+  graphite/50
+  surge-alloy/20
 ]
 
 research: {
