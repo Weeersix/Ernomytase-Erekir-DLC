@@ -1,6 +1,6 @@
 type: flying
 name: Extermination
-description: Fires three energy projectiles and a volley of five rocket.
+description: Fires two energy projectiles and a volley of five rocket.
 envDisabled: 0
 lowAltitude: false
 speed: 0.8
@@ -52,16 +52,16 @@ outlineColor: 232024
 weapons: [
 {
    name: Extermination-missle-weapon
-   x: 19.5
-   y: 7.25
-   range: 100
+   x: 27.75
+   y: -5.25
    reload: 150
    rotate: true
+   layerOffset: -0.0001
    rotateSpeed: 1
    rotationLimit: 200
    recoil: 2
    mirror: true
-   shootY: 9
+   shootY: 2.5
    shootSound: missileLarge
    shoot: {
   type: ShootSpread
@@ -69,21 +69,7 @@ weapons: [
   shotDelay: 7
   firstShotDelay: 15
 }
-  inaccuracy: 80
-
-  parts: [
-    {
-    type: RegionPart
-    suffix: -blade
-    under: false
-    mirror: true
-    outline: true
-    progress: warmup
-    outline: false
-    moveY: -2.25
-    moveRot: -13
-    } 
-  ]
+  inaccuracy: 90
 
     heatColor: fa6a0a
     cooldownTime: 140
@@ -111,17 +97,16 @@ weapons: [
   }
 }
 {
-    type: weapon
+    name: Extermination-weapon
     x: 0
-    y: 0.25
+    y: 19
     range: 90
     reload: 300
-    rotate: true
-    rotateSpeed: 0.6
-    layerOffset: 0.0001
-    recoil: 3.5
+    rotate: false
+    layerOffset: -0.001
+    recoil: 1.3
     mirror: false
-    shootY: 16
+    shootY: -0.5
     shootSound: shockBlast
     shoot: {
     type: ShootHelix
@@ -135,7 +120,7 @@ weapons: [
     bullet: {
       type: ArtilleryBulletType
       damage: 150
-      lifetime: 120
+      lifetime: 100
       sprite: ernom-large-orb
       speed: 6
       width: 29
@@ -292,27 +277,27 @@ fragSpread: 1.5
 
 engines: [
 {
-    x: 10.75
-    y: -26.75
+    x: 9.75
+    y: -28.75
     rotation: 90
-    radius: 7.5
-}
-{
-    x: -10.75
-    y: -26.75
-    rotation: 90
-    radius: 7.5
-}
-{
-    x: 29.25
-    y: -19
-    rotation: -45
     radius: 7
 }
 {
-    x: -29.25
-    y: -19
-    rotation: -45
+    x: -9.75
+    y: -28.75
+    rotation: 90
     radius: 7
+}
+{
+    x: 31
+    y: -18.75
+    rotation: 45
+    radius: 6
+}
+{
+    x: -31
+    y: -18.75
+    rotation: 135
+    radius: 6
 }
 ]
