@@ -1,8 +1,8 @@
 minGameVersion: 145
 name: "ernom"
-subtitle: "Version 0.2.1"
-displayName: "Ernomytase | Erekir DLC"
-description: "Ernomytase - a modification that adds a continuation of the Erekir campaign"
-author: "Weeersix"
+subtitle: "[#ff9a0a]Version 0.2.1"
+displayName: "[#ff7000]Ernomytase | [#ff9a0a]Erekir DLC"
+description: "[#ff7000]Ernomytase [#e1e1e1]- a modification that adds a continuation of the Erekir campaign"
+author: "[purple]Weeer[#4a00d9]six"
 version: "0.2.1"
 hidden: false
