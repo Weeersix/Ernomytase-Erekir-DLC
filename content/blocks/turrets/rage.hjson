@@ -1,0 +1,176 @@
+type: ItemTurret
+name: Rage
+description: Fires a volley of four rockets, dealing a large damage.
+size: 3
+health: 1850
+squareSprite: false
+reload: 160
+recoil: 1.6
+range: 290
+rotateSpeed: 3.2
+category: turret
+shootSound: missileSmall
+shootEffect: shootTitan
+shootY: 4
+shoot: {
+	type: shootSpread
+	shots: 4
+	spread: 10
+	shotDelay: 25
+}
+inaccuracy: 60
+
+drawer: {
+    type: DrawTurret
+    parts: [
+    {
+    type: RegionPart
+    suffix: -blade
+    under: true
+    mirror: true
+    progress: warmup
+    heatProgress: recoil
+    moveRot: -15
+    }
+    {
+    type: RegionPart
+    suffix: -anim
+    under: false
+    mirror: true
+    progress: recoil
+    heatProgress: recoil
+    moveRot: -15
+    moveY: -1
+    }
+  ]
+}
+
+requirements: [
+  tungsten/200
+  graphite/150
+  silicon/80
+  oxide/80
+  surge-alloy/50
+]
+
+ammoTypes: {
+  surge-alloy: {
+  spawnUnit: Rage-missle
+  trailRotation: true
+  trailEffect: disperseTrail
+  trailChance: 0.44
+  shootEffect: {
+    type: WaveEffect
+    colorTo: ffffff
+    sizeTo: 19
+    lifetime: 14
+    strokeFrom: 4
+  }
+  fragBullet: {
+    type: LightningBulletType
+    damage: 90
+    collidesAir: false
+    ammoMultiplier: 1
+    lightningColor: fff151
+    lightningLength: 6
+    lightningLengthRand: 13
+    buildingDamageMultiplier: 0.75
+  }
+  fragBullets: 7
+  fragSpread: 2.3
+}
+  t2-nickel: {
+  spawnUnit: Rage-nickel-missle
+  rangeChange: 130
+  shootEffect: {
+    type: WaveEffect
+    colorTo: ffffff
+    sizeTo: 19
+    lifetime: 14
+    strokeFrom: 4
+    despawnEffect: {
+        type: ExplosionEffect
+        lifetime: 75
+        waveStroke: 6
+        waveLife: 8.7
+        waveColor: ffffff
+        sparkColor: 9aafaa
+        waveRad: 50
+        smokeSize: 7
+        smokes: 7
+        smokeColor: 799ba1
+        smokeSizeBase: 0
+        sparks: 11
+        sparkRad: 45
+        sparkLen: 7
+        sparkStroke: 2.6
+        }
+      fragBullet: {
+    type: BasicBulletType
+    width: 16
+    height: 16
+    speed: 4
+    lifetime: 50
+    damage: 50
+    backColor: 3d5158
+    frontColor: 9aafaa
+    trailColor: 3d5158
+    trailWidth: 2
+    trailLength: 2.5
+    trailRotation: true
+    trailEffect: disperseTrail
+    trailChance: 0.44
+    collidesAir: false
+    buildingDamageMultiplier: 0.75
+    ammoMultiplier: 1
+      fragBullet: {
+        type: ExplosionBulletType
+        splashDamage: 100
+        splashDamageRadius: 18
+        buildingDamageMultiplier: 0.75
+        despawnEffect: {
+          type: ExplosionEffect
+          lifetime: 65
+          waveStroke: 6
+          waveLife: 8.7
+          waveColor: ffffff
+          sparkColor: 9aafaa
+          waveRad: 50
+          smokeSize: 7
+          smokes: 7
+          smokeColor: 799ba1
+          smokeSizeBase: 0
+          sparks: 11
+          sparkRad: 45
+          sparkLen: 7
+          sparkStroke: 2.6
+        }
+    }
+    fragBullets: 1
+  }
+  fragBullets: 5
+  fragVelocityMin: 0.5
+  fragRandomSpread: 130
+  fragLifeMin: 0.4
+    }
+  } 
+  }
+
+research: {
+  parent: scathe
+  requirements: [
+      beryllium/1200
+      tungsten/800
+      oxide/700
+      graphite/650
+      silicon/600
+      surge-alloy/500
+      t2-nickel/450
+ ]
+ objectives: [
+{
+  type: OnSector
+  preset: RhyoliteRavine
+}
+]
+}
