@@ -1,5 +1,5 @@
 research: {
-    parent: shielded-wall-small
+    parent: w5-shielded-wall-small
     requirements: [
           phase-fabric/120
           surge-alloy/210

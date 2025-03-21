@@ -1,0 +1,19 @@
+name: Nickel wall
+description: Protects buildings from enemy projectiles, periodically reflecting them.
+type: Wall
+category: defense
+size: 3
+health: 12060
+armor: 16
+chanceDeflect: 12
+
+requirements: [
+    t2-nickel/36
+]
+
+research: {
+    parent: w8-nickel-wall-large
+    requirements: [
+        t2-nickel/1350
+    ]
+  }

@@ -1,0 +1,32 @@
+name: Shielded wall small
+description: Protects buildings from enemy shells. When energy is aplied, it creates a shield that absorbs most projectiles. Conducts energy.
+type: ShieldWall
+category: defense
+size: 1
+health: 1040
+armor: 15
+
+outputsPower: false
+hasPower: true
+consumesPower: true
+conductivePower: true
+chanceDeflect: 8
+
+consumes: {
+  power: 0.05
+}
+
+requirements: [
+    phase-fabric/5
+    surge-alloy/3
+    beryllium/3
+]
+
+research: {
+    parent: w4-reinforced-surge-wall-huge
+    requirements: [
+          phase-fabric/50
+          surge-alloy/60
+          beryllium/80
+    ]
+  }
