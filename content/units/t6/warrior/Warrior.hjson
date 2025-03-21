@@ -62,11 +62,11 @@ weapons: [
     recoil: 3
     shootY: 22.5
     shoot: {
-  type: ShootSpread
-  shots: 5
-  spread: 1.8
-  firstShotDelay: 30
-}
+      type: ShootSpread
+      shots: 5
+      spread: 0.5
+      firstShotDelay: 85
+    }
 
 parts: [
   {
@@ -331,7 +331,8 @@ research: {
       requirements: [
         silicon/1000
         tungsten/950
-        sulfur/900
+        t1-sulfur/900
+        t2-nickel/750
         oxide/600
         carbide/400
       ]
