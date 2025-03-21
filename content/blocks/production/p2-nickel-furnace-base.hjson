@@ -52,11 +52,6 @@ drawer: {
       layer: 1
     }
     {
-      type: DrawRegion
-      suffix: -cap
-      layer: 1
-    }
-    {
       type: DrawDefault
     }
   ]
