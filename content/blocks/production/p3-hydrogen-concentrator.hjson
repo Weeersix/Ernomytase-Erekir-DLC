@@ -1,0 +1,85 @@
+type: HeatCrafter
+name: Hydrogen concentrator (Module 1)
+description: One of the parts of the nickel furnace. Produced hydrogen from water. Requires heat.
+hasLiquids: true
+size: 3
+liquidCapacity: 40
+liquidOutputDirections: [2]
+heatRequirement: 8
+overheatScale: 0.75
+maxEfficiency: 4
+
+consumes: {
+  power: 2
+
+  liquids: {
+    liquids: [
+      water/0.25
+    ]
+  }
+}
+
+craftTime: 90
+outputLiquid: hydrogen/0.2
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: water
+      alpha: 0.7
+    }
+    {
+      type: DrawHeatInput
+    }
+    {
+      type: DrawBubbles
+      color: 486acd
+      x: -2.5
+      sides: 10
+      recurrence: 4.5
+      spread: 6.2
+      radius: 2
+      amount: 24
+    }
+    {
+      type: DrawRegion
+      suffix: -cap
+      layer: 1
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+category: crafting
+requirements: [
+  beryllium/150
+  tungsten/150
+  silicon/100
+  oxide/50
+]
+
+research: {
+parent: p2-nickel-furnace-base
+planet: erekir
+requirements: [
+  beryllium/800
+  tungsten/650
+  silicon/600
+  oxide/600
+  phase-fabric/400
+  t1-sulfur/100
+    ]
+    objectives: [
+   {
+    type: OnSector
+    preset: RhyoliteRavine
+   }
+ ]
+}

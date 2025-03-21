@@ -1,0 +1,80 @@
+type: HeatCrafter
+name: Carbide smelter (Module 2)
+description: One of the parts of the nickel furnace. Produces carbide from graphite and tungsten. Requires heat.
+hasItems: false
+hasPower: true
+size: 3
+
+consumes: {
+  power: 2.66666667
+
+  items: {
+  items: [
+  tungsten/3
+  graphite/2
+  silicon/2
+]
+}
+}
+
+heatRequirement: 10
+overheatScale: 0.75
+maxEfficiency: 4
+
+craftTime: 160
+outputItem: carbide/2
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawCrucibleFlame
+      circleStroke: 1.1
+	    particleLen: 2
+      y: -1
+    }
+    {
+      type: DrawHeatInput
+    }
+    {
+      type: DrawRegion
+      suffix: -cap
+      layer: 1
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+category: crafting
+requirements: [
+  tungsten/200
+  silicon/150
+  oxide/100
+  carbide/50
+  surge-alloy/25
+  t1-sulfur/25
+]
+
+research: {
+parent: p2-nickel-furnace-base
+planet: erekir
+requirements: [
+  tungsten/900
+  oxide/850
+  silicon/800
+  carbide/800
+  surge-alloy/350
+  t1-sulfur/200
+    ]
+    objectives: [
+   {
+    type: OnSector
+    preset: RhyoliteRavine
+   }
+ ]
+}

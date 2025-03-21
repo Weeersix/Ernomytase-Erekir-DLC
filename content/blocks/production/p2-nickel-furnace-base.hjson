@@ -1,0 +1,92 @@
+type: GenericCrafter
+name: Nickel furnace base
+description: The base of a nickel furnace. Produces nickel from carbide and hydrogen.
+hasItems: true
+hasLiquids: true
+hasPower: true
+size: 3
+
+consumes: {
+  power: 4.66666667
+
+  items: {
+    items: [
+      carbide/3
+      t1-sulfur/2
+  ]
+}
+  liquids: {
+    liquids: [
+      hydrogen/0.2
+    ]
+}
+}
+
+craftTime: 85
+outputItem: t2-nickel/2
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      padding: 2
+      drawLiquid: hydrogen
+      alpha: 0.7
+    }
+    {
+      type: DrawCircles
+      color: b6c1ff
+      x: 3
+      y: -3
+      strokeMax: 0.8
+      radius: 8
+      amount: 1.3
+    }
+    {
+      type: DrawRegion
+      suffix: -overlay
+      layer: 1
+    }
+    {
+      type: DrawRegion
+      suffix: -cap
+      layer: 1
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+category: crafting
+requirements: [
+  tungsten/250
+  thorium/150
+  oxide/150
+  carbide/100
+  phase-fabric/50
+  t1-sulfur/25
+]
+
+research: {
+parent: carbide-crucible
+planet: erekir
+requirements: [
+  tungsten/900
+  thorium/900
+  oxide/750
+  carbide/500
+  phase-fabric/400
+  t1-sulfur/200
+    ]
+    objectives: [
+   {
+    type: OnSector
+    preset: RhyoliteRavine
+   }
+ ]
+}

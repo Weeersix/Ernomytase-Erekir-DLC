@@ -1,0 +1,77 @@
+type: GenericCrafter
+name: Graphite synthesizer
+description: Synthesizes graphite from sand and hydrogen.
+hasItems: false
+hasLiquids: true
+hasPower: true
+size: 3
+squareSprite: false
+
+consumes: {
+  power: 0.66666667
+
+  items: {
+    items: [
+      sand/4
+  ]
+}
+  liquids: {
+    liquids: [
+      hydrogen/0.0666666667
+    ]
+}
+}
+
+craftTime: 80
+outputItem: graphite/2
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      padding: 2
+      drawLiquid: hydrogen
+      alpha: 0.7
+    }
+    {
+      type: DrawGlowRegion
+    }
+    {
+      type: DrawSoftParticles
+      alpha: 0.35
+      particleRad: 10
+      particleSize: 8
+      particleLife: 110
+      particles: 3
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+category: crafting
+requirements: [
+  beryllium/80
+  silicon/50
+]
+
+research: {
+parent: electrolyzer
+planet: erekir
+requirements: [
+  beryllium/200
+  silicon/120
+  graphite/100
+    ]
+    objectives: [
+   {
+    type: SectorComplete
+    preset: atlas
+   }
+ ]
+}

@@ -21,7 +21,7 @@ consumes: {
 }
 
 craftTime: 130
-outputItem: sulfur/1
+outputItem: t1-sulfur/1
 outputLiquid: water/0.05
 liquidCapacity: 20
 itemCapacity: 20
@@ -39,12 +39,6 @@ drawer: {
       particleSize: 9.5
       particleLife: 240
       particles: 29
-    }
-    {
-      type: DrawRegion
-		  suffix: -rotator
-		  spinSprite: true
-		  rotateSpeed: 6
     }
     {
       type: DrawBlurSpin
@@ -78,7 +72,7 @@ requirements: [
     objectives: [
    {
     type: OnSector
-    preset: GeothermalZone
+    preset: Geyser
    }
  ]
 }
