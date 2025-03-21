@@ -40,11 +40,6 @@ drawer: {
       type: DrawHeatInput
     }
     {
-      type: DrawRegion
-      suffix: -cap
-      layer: 1
-    }
-    {
       type: DrawDefault
     }
   ]
