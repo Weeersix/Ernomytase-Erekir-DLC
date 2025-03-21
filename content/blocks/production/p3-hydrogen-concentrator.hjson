@@ -47,11 +47,6 @@ drawer: {
       amount: 24
     }
     {
-      type: DrawRegion
-      suffix: -cap
-      layer: 1
-    }
-    {
       type: DrawDefault
     }
   ]
