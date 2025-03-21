@@ -1,0 +1,19 @@
+type: Junction
+name: Duct junction
+speed: 48
+capacity: 9
+health: 60
+position: [3,3]
+
+category: distribution
+requirements: [
+  beryllium/4
+]
+
+research: {
+parent: duct
+planet: erekir
+requirements: [
+  beryllium/24
+    ]
+}
