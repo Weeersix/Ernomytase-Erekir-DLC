@@ -1,0 +1,17 @@
+  name: Nickel
+  description: It used in advanced desings and as the most powerful ammunition.
+  explosiveness: 0
+  flammability: 0
+  radioactivity: 0
+  charge: 0.2
+  color: 577277
+  cost: 5
+
+  hiddenOnPlanets: [
+    serpulo
+  ]
+
+  research: {
+    parent: t1-sulfur
+    planet: erekir
+  }

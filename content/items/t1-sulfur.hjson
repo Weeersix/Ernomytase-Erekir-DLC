@@ -1,0 +1,17 @@
+  name: Sulfur
+  description: It used in more advanced installations, electronics and ammunition.
+  explosiveness: 0
+  flammability: 1.5
+  radioactivity: 0.2
+  charge: 0
+  color: cabf45
+  cost: 6
+
+  hiddenOnPlanets: [
+    serpulo
+  ]
+
+  research: {
+    parent: carbide
+    planet: erekir
+  }
