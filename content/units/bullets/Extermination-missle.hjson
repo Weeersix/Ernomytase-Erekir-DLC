@@ -7,34 +7,33 @@ logicControllable: false
 speed: 4
 physics: false
 lifetime: 200
-hitSize: 1
-trailLength: 6
+hitSize: 0.8
+trailLength: 7
 useUnitCap: false
 health: 120
-trailColor: bf92f9
+trailColor: b587f0
 drawCell: false
 range: 2
 loopSound: missileTrail
 loopSoundVolume: 0.3
 
-missileAccelTime: 25
+missileAccelTime: 35
 targetAir: false
 targetUnderBlocks: false
 
-engineLayer: 116
-engineColor: bf92f9
-trailColor: bf92f9
+engineLayer: 114
+engineColor: b587f0
 
 parts: [
   {
-            type: ShapePart
-            layer: 116
-            circle: true
-            y: -0.5
-            radius: 2
-            color: bf92f9
-            colorTo: dbbfff
-            interp: pow5In
+    type: ShapePart
+    layer: 116
+    circle: true
+    y: -1
+    radius: 2
+    color: bf92f9
+    colorTo: dbbfff
+    interp: pow5In
   }
 ]
 
@@ -49,8 +48,42 @@ weapons: [
     shake: 1
     bullet: {
       type: ExplosionBulletType
+      layer: 116
       splashDamage: 120
       splashDamageRadius: 25
+      shootEffect: { 
+      type: ExplosionEffect
+      lifetime: 50
+      waveStroke: 5
+      waveLife: 8
+      waveColor: ffffff
+      sparkColor: 7469af
+      waveRad: 40
+      smokeSize: 4
+      smokes: 7
+      smokeSizeBase: 0
+      sparks: 10
+      sparkRad: 40
+      sparkLen: 6
+      sparkStroke: 2
+      }
+      despawnEffect: {
+      type: ExplosionEffect
+      lifetime: 50
+      waveStroke: 5
+      waveLife: 8
+      waveColor: ffffff
+      sparkColor: 7469af
+      waveRad: 40
+      smokeSize: 5
+      smokes: 7
+      smokeColor: bc89ff
+      smokeSizeBase: 0
+      sparks: 10
+      sparkRad: 40
+      sparkLen: 6
+      sparkStroke: 2
+    }
     }
   } 
 ]

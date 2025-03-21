@@ -1,0 +1,68 @@
+type: missile
+template: MissileUnitType
+flying: true
+lowAltitude: true
+playerControllable: true
+logicControllable: false
+speed: 6
+physics: false
+lifetime: 120
+hitSize: 2.4
+trailLength: 4
+useUnitCap: false
+health: 380
+range: 2
+loopSound: missileTrail
+loopSoundVolume: 0.3
+trailColor: f7ea58
+
+abilities: [
+	{
+	type: MoveEffectAbility
+	y: -4
+	effect: missileTrailShort
+	interval: 0.5
+	color: f7ea58
+	teamColor: false
+	}
+]
+
+missileAccelTime: 30
+targetAir: true
+targetUnderBlocks: false
+
+engineColor: f7ea58
+engineLayer: 114
+
+hidden: true
+targetable: true
+weapons: [
+  {
+    reload: 1
+    shootOnDeath: true
+    mirror: true
+    shootCone: 360
+    shake: 2
+    bullet: {
+      type: ExplosionBulletType
+      splashDamage: 360
+      splashDamageRadius: 25
+      buildingDamageMultiplier: 0.25
+      trailEffect: missileTrail
+      trailInterval: 3
+      trailParam: 4
+      fragBullet: {
+    type: LightningBulletType
+    damage: 70
+    collidesAir: false
+    ammoMultiplier: 1
+    buildingDamageMultiplier: 0.25
+    lightningColor: fff151
+    lightningLength: 6
+    lightningLengthRand: 13
+  }
+  fragBullets: 7
+  fragSpread: 2.3
+    }
+  } 
+]
