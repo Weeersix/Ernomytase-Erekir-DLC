@@ -12,7 +12,7 @@ requirements: [
 ]
 
 research: {
-    parent: w6-shielded-wall-huge
+    parent: w3-carbide-wall-huge
     requirements: [
         t2-nickel/300
     ]
