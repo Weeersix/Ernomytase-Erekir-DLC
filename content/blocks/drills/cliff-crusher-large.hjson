@@ -1,0 +1,40 @@
+type: WallCrafter
+name: Large cliff crusher
+discription: It crushes the walls, constantly removing sand. It requires energy and ozone to work. The effectiveness depends on the type of wall.
+size: 3
+drillTime: 50
+attribute: sand
+outputItem: sand
+fogRadius: 3
+ambientSound: drill
+ambientSoundVolume: 0.08
+itemCapasity: 20
+
+consumes: {
+  power: 0.666666667
+
+  liquids: {
+  liquids: [
+  ozone/0.0166666667
+]
+}
+}
+
+category: production
+requirements: [
+  silicon/80
+  tungsten/50
+  beryllium/50
+  oxide/15
+]
+
+research: {
+parent: cliff-crusher
+planet: erekir
+requirements: [
+  silicon/80
+  tungsten/50
+  beryllium/50
+  oxide/15
+    ]
+}
