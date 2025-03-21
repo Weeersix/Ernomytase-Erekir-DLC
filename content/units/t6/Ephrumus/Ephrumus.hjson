@@ -140,7 +140,7 @@ weapons: [
   type: ShootSpread
   shots: 5
   shotDelay: 12
-  firstShotDelay: 55
+  firstShotDelay: 90
 }
 shootSound: pulseBlast
 
@@ -246,7 +246,7 @@ cooldownTime: 400
         shootEffect: sparkShoot
         hitEffect: pointHit
         maxRange: 150
-        damage: 50
+        damage: 25
     }
   }
   {
@@ -391,7 +391,25 @@ fragBullet: {
       ]
 }
         fragBullets: 8
-        fragSpread: 3
+        fragRandomSpread: 115
 }
   }
 ]
+
+research: {
+    parent: collaris
+    requirements: [
+      silicon/1400
+      tungsten/1100
+      t2-nickel/900
+      oxide/900
+      carbide/850
+      phase-fabric/700
+    ]
+    objectives: [
+{
+  type: OnSector
+  preset: Cascade
+}
+]
+}
