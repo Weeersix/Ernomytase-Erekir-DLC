@@ -1,0 +1,36 @@
+type: Pump
+name: Hardened pump
+description: Pumps and removes liquids. It requires cyanogen and energy to work.
+liquidCapacity: 290
+health: 510
+size: 3
+pumpAmount: 2
+
+category: liquid
+requirements: [
+  silicon/50
+  beryllium/60
+  oxide/20
+  graphite/40
+]
+
+consumes: {
+  power: 0.833333333
+
+  liquids: {
+  liquids: [
+  cyanogen/0.0166666667
+]
+}
+}
+
+research: {
+parent: reinforced-pump
+planet: erekir
+requirements: [
+  silicon/250
+  beryllium/400
+  oxide/400
+  graphite/750
+    ]
+}

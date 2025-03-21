@@ -1,0 +1,27 @@
+type: Conduit
+name: Nickel conduit
+description: Moves liquids forward. Can store liquids.
+leaks: false
+liquidCapacity: 65
+liquidPressure: 1.6
+health: 350
+underBullets: true
+
+junctionReplacement: reinforced-liquid-junction
+bridgeReplacement: reinforced-bridge-conduit
+
+category: liquid
+requirements: [
+  beryllium/4
+  t2-nickel/1
+]
+
+category: liquid
+research: {
+parent: reinforced-bridge-conduit
+planet: erekir
+requirements: [
+  beryllium/450
+  t2-nickel/150
+    ]
+}
