@@ -1,18 +1,19 @@
-//localizedName: Geothermal zone
-//description: A lot of geothermal activity has been detected in this sector. Explore the [#ffd37f]vent drill[] and start mining sulfur.
+//localizedName: GeothermalZone
+//description: A lot of geothermal activity has been detected in this sector. A large number of rifts have been detected, caused by a sharp increase in temperature. Be careful! New rifts may appear at any time.
 planet: erekir
-sector: 2
-difficulty: 8
+sector: 31
+captureWave: 24
+difficulty: 10
 addStartingItems: true
 showSectorLandInfo: true
 alwaysUnlocked: false
 research: {
-parent: karst
+parent: origin
 requiresUnlock: false
 objectives: [
    {
     type: SectorComplete
-    preset: karst
+    preset: RhyoliteRavine
    }
  ]
 }

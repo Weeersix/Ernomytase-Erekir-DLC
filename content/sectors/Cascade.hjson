@@ -1,0 +1,17 @@
+//localizedName: Cascade
+//description: You have everything you need to capture this sector. The enemy has all the most powerful technologies.
+planet: erekir
+sector: 71
+difficulty: 10
+addStartingItems: true
+showSectorLandInfo: true
+alwaysUnlocked: false
+research: {
+parent: RhyoliteRavine
+objectives: [
+   {
+    type: SectorComplete
+    preset: RhyoliteRavine
+   }
+ ]
+}

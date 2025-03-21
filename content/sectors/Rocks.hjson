@@ -1,0 +1,18 @@
+//localizedName: Rocks
+//description: There are a large number of rocks in this sector, among which the enemy base is located. Create units of the fourth tier and capture the sector.
+planet: erekir
+sector: 65
+difficulty: 6
+addStartingItems: true
+showSectorLandInfo: true
+alwaysUnlocked: false
+research: {
+parent: crossroads
+requiresUnlock: false
+objectives: [
+   {
+    type: SectorComplete
+    preset: crossroads
+   }
+ ]
+}

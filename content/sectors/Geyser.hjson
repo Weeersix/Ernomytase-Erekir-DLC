@@ -1,0 +1,18 @@
+//localizedName: Geyser
+//description: The sector is a huge geyser.There is a large amount of slag at the bottom. Explore the [#ffd37f]vent drill[] and start mining sulfur.
+planet: erekir
+sector: 2
+difficulty: 8
+addStartingItems: true
+showSectorLandInfo: true
+alwaysUnlocked: false
+research: {
+parent: karst
+requiresUnlock: false
+objectives: [
+   {
+    type: SectorComplete
+    preset: karst
+   }
+ ]
+}
