@@ -7,12 +7,12 @@
   tier: 2
 
 requirements: [
-  silicon/1000
-  tungsten/800
-  oxide/750
+  silicon/800
+  tungsten/700
+  oxide/550
   thorium/400
   carbide/350
-  sulfur/130
+  t2-nickel/150
 ]
 
 consumes: {
@@ -32,7 +32,8 @@ consumes: {
           oxide/1250
           thorium/850
           carbide/800
-          sulfur/800
+          t1-sulfur/800
+          t2-nickel/400
  ]
  objectives: [
 {

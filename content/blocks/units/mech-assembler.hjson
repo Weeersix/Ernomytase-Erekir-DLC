@@ -20,8 +20,8 @@ unit: Ephrumus
 requirements: [
 merui/6
 cleroi/8
-ernom-tungsten-wall-huge/16
-ernom-carbide-wall-huge/8
+ernom-w2-tungsten-wall-huge/16
+ernom-w3-carbide-wall-huge/8
 ]
 time: 14400
 }
