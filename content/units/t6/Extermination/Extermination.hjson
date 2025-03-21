@@ -109,10 +109,10 @@ weapons: [
     shootY: -0.5
     shootSound: shockBlast
     shoot: {
-    type: ShootHelix
-    shots: 3
-    mag: 1.5
-    scl: 5
+      type: ShootHelix
+      shots: 3
+      mag: 1.5
+      scl: 5
     }
 
     heatColor: fa6a0a
@@ -252,7 +252,7 @@ weapons: [
         }
       ]
       fragBullets: 3
-      fragSpread: 1.5
+      fragRandomSpread: 115
       intervalBullets: 2
       intervalAngle: 4
       intervalRandomSpread: 0
@@ -301,3 +301,20 @@ engines: [
     radius: 6
 }
 ]
+
+research: {
+      parent: disrupt
+      requirements: [
+        silicon/1800
+        tungsten/1500
+        t2-nickel/1400
+        carbide/1000
+        phase-fabric/950
+      ]
+      objectives: [
+{
+  type: SectorComplete
+  preset: Cascade
+}
+]
+}
