@@ -6,19 +6,19 @@ size: 3
 fogRadius: 3
 category: power
 outputsPower: true
-powerProduction: 45
+powerProduction: 51.6666667
 hasLiquids: true
 itemDuration: 180
 
 consumes: {
   items: {
     items: [
-      sulfur/2
+      t1-sulfur/2
     ]
   }
   liquids: {
     liquids: [
-      hydrogen/0.166666667
+      hydrogen/0.2
     ]
   }
 }
@@ -29,7 +29,7 @@ requirements: [
   surge-alloy/120
   graphite/100
   carbide/80
-  sulfur/60
+  t1-sulfur/60
 ]
 
 drawer: {
@@ -46,10 +46,10 @@ drawer: {
     }
     {
     type: DrawSoftParticles
-    alpha: 0.35
-    particleRad: 7
+    alpha: 0.8
+    particleRad: 16
     particleSize: 7
-    particleLife: 80
+    particleLife: 90
     particles: 5
     }
     {
@@ -76,12 +76,12 @@ requirements: [
   surge-alloy/1200
   silicon/1150
   graphite/950
-  sulfur/700
+  t1-sulfur/700
     ]
     objectives: [
    {
     type: OnSector
-    preset: GeothermalZone
+    preset: Geyser
    }
  ]
 }
