@@ -8,12 +8,14 @@ armor: 16
 chanceDeflect: 12
 
 requirements: [
+    carbide/18
     t2-nickel/36
 ]
 
 research: {
     parent: w8-nickel-wall-large
     requirements: [
+        carbide/1400
         t2-nickel/1350
     ]
   }
