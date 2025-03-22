@@ -15,7 +15,7 @@ requirements: [
 research: {
     parent: w3-carbide-wall-huge
     requirements: [
-        carbide/200
+        carbide/350
         t2-nickel/300
     ]
   }
